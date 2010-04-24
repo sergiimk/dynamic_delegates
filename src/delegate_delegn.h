@@ -204,7 +204,11 @@ public:
 	inline void bind(RetType (*function_to_bind)(P1 p1)) {
 		m_Closure.bindstaticfunc(this, &delegate1::InvokeStaticFunction, 
 			function_to_bind); }
-	RetType operator() (P1 p1) const { return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(p1); }
+	template<class Pf1>
+	RetType operator() (Pf1&& p1) const 
+	{ 
+		return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(std::forward<Pf1>(p1)); 
+	}
 
 private:	// Invoker for static functions
 	RetType InvokeStaticFunction(P1 p1) const {
@@ -241,7 +245,13 @@ public:
 	inline void bind(RetType (*function_to_bind)(P1 p1, P2 p2)) {
 		m_Closure.bindstaticfunc(this, &delegate2::InvokeStaticFunction, 
 			function_to_bind); }
-	RetType operator() (P1 p1, P2 p2) const { return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(p1, p2); }
+	template<class Pf1, class Pf2>
+	RetType operator() (Pf1&& p1, Pf2&& p2) const 
+	{ 
+		return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(
+			std::forward<Pf1>(p1),
+			std::forward<Pf2>(p2)); 
+	}
 
 private:
 	RetType InvokeStaticFunction(P1 p1, P2 p2) const {
@@ -277,8 +287,14 @@ public:
 	inline void bind(RetType (*function_to_bind)(P1 p1, P2 p2, P3 p3)) {
 		m_Closure.bindstaticfunc(this, &delegate3::InvokeStaticFunction, 
 			function_to_bind); }
-	RetType operator() (P1 p1, P2 p2, P3 p3) const {
-		return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(p1, p2, p3); }
+	template<class Pf1, class Pf2, class Pf3>
+	RetType operator() (Pf1&& p1, Pf2&& p2, Pf3&& p3) const 
+	{ 
+		return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(
+			std::forward<Pf1>(p1),
+			std::forward<Pf2>(p2),
+			std::forward<Pf3>(p3)); 
+	}
 
 private:
 	RetType InvokeStaticFunction(P1 p1, P2 p2, P3 p3) const {
@@ -314,8 +330,15 @@ public:
 	inline void bind(RetType (*function_to_bind)(P1 p1, P2 p2, P3 p3, P4 p4)) {
 		m_Closure.bindstaticfunc(this, &delegate4::InvokeStaticFunction, 
 			function_to_bind); }
-	RetType operator() (P1 p1, P2 p2, P3 p3, P4 p4) const {
-		return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(p1, p2, p3, p4); }
+	template<class Pf1, class Pf2, class Pf3, class Pf4>
+	RetType operator() (Pf1&& p1, Pf2&& p2, Pf3&& p3, Pf4&& p4) const 
+	{ 
+		return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(
+			std::forward<Pf1>(p1),
+			std::forward<Pf2>(p2),
+			std::forward<Pf3>(p3),
+			std::forward<Pf4>(p4)); 
+	}
 
 private:
 	RetType InvokeStaticFunction(P1 p1, P2 p2, P3 p3, P4 p4) const {
@@ -351,8 +374,16 @@ public:
 	inline void bind(RetType (*function_to_bind)(P1 p1, P2 p2, P3 p3, P4 p4, P5 p5)) {
 		m_Closure.bindstaticfunc(this, &delegate5::InvokeStaticFunction, 
 			function_to_bind); }
-	RetType operator() (P1 p1, P2 p2, P3 p3, P4 p4, P5 p5) const {
-		return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(p1, p2, p3, p4, p5); }
+	template<class Pf1, class Pf2, class Pf3, class Pf4, class Pf5>
+	RetType operator() (Pf1&& p1, Pf2&& p2, Pf3&& p3, Pf4&& p4, Pf5&& p5) const 
+	{ 
+		return (m_Closure.GetClosureThis()->*(m_Closure.GetClosureMemPtr()))(
+			std::forward<Pf1>(p1),
+			std::forward<Pf2>(p2),
+			std::forward<Pf3>(p3),
+			std::forward<Pf4>(p4),
+			std::forward<Pf5>(p5)); 
+	}
 
 private:
 	RetType InvokeStaticFunction(P1 p1, P2 p2, P3 p3, P4 p4, P5 p5) const {

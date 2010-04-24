@@ -1,3 +1,9 @@
+==== dynamic delegates 0.1.0.5 (24 April 2010) ====
+- operator() uses perfect forwarding pattern
+- no copying overhead for methods
+- one copying per argument left for static functions (seems unavoidable)
+
+
 ==== dynamic delegates 0.1.0.0 (24 April 2010) ====
 
 - restructured and refactored initial version
