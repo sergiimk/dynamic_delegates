@@ -1,0 +1,12 @@
+==== dynamic delegates 0.1.0.0 (24 April 2010) ====
+
+- restructured and refactored initial version
+- generating 'make_delegate' const and non-const version with macro
+- removed obsolete msvc6 hacks, targeting C++0x now
+- replaced error generations with static_assert
+- extracted delegate traits class
+- extracted base delegate_n class removing most of the repeating functions
+- added 'make_delegate's for static functions (returns func-style delegate now)
+- added dynamic delegates !!! (old zero-overhead delegates left too, to be used in cases when we don't need invoking)
+- generating function-style 'delegate' and 'delegate_dynamic' with macro
+- generating 'make_delegate_dynamic' and 'make_delegate' with macro

@@ -1,0 +1,19 @@
+# Ignore all backup files
+*~
+
+# Ignore build artifacts
+bin/*
+
+# Ignore python compiled files
+*.pyc
+
+# Ignore msvc temp files
+build/msvc-10.0/ipch
+build/msvc-10.0/*.suo
+build/msvc-10.0/*.user
+build/msvc-10.0/*.sdf
+build/msvc-10.0/*.opensdf
+
+# Ignore codeblocks tmp files
+build/codeblocks/*.depend
+build/codeblocks/*.layout

@@ -1,0 +1,38 @@
+h2. Dynamic Delegates
+
+This library is a further development of the Don Clugston's project "Member Function Pointers and the Fastest Possible C++ Delegates" (http://www.codeproject.com/KB/cpp/FastDelegate.aspx).
+
+Modification are mainly aimed to make this library useful for implementing the reflection library and data marshalling systems of SekaiFramework (http://github.com/mikhtonyuk/SekaiFramework).
+
+
+h3. Invocation feature
+
+Main feature of dynamic delegate library is a possibility to invoke a delegate using an array of arguments. For example:
+
+<pre>void F1(int i) { ... }
+
+auto deleg = make_delegate_dynamic(&F1);
+int arg = 10;
+void* args[] = { &arg };
+// Calls F1
+deleg.invoke(args, 0 /* no return value */ );</pre>
+
+
+Dynamic invocation extension is separated from original zero-overhead delegates, so that they can be used in places where dynamic invocation is not required.
+
+h3. Performance
+
+Performance of ordinary delegates left unchanged, only slightly reduced compile time thanks to code refactoring.
+
+Dynamic delegates add a virtual table pointer size overhead, plus a virtual call overhead for eack invoke call.
+
+
+h3. License
+
+This code is distributed free of charge and can be used for any purpose. See LICENSE file for details.
+
+
+h3. Contacts
+
+If you have any questions - mail me:
+Sergey Mikhtonyuk - mikhtonyuk@gmail.com
