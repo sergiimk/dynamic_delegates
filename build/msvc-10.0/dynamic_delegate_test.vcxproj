@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C395F3A9-DA6E-4769-9CD2-2DD09ACB5C9F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>generic_delegate_test</RootNamespace>
+    <RootNamespace>dynamic_delegate_test</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

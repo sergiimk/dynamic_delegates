@@ -2,7 +2,10 @@
 #define BOOST_TEST_MODULE FileSystem test
 #include <boost/test/unit_test.hpp>
 #include "delegate.h"
+#include "delegate_dynamic.h"
 //////////////////////////////////////////////////////////////////////////
+
+using namespace delegates;
 
 struct Test
 {

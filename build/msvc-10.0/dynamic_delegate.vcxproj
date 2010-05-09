@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9AFD28FC-B249-4CC3-8BB2-5DC876445FCD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>generic_delegate</RootNamespace>
+    <RootNamespace>dynamic_delegate</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -83,6 +83,7 @@
     <ClInclude Include="../../src/delegate_funcstyle.h" />
     <ClInclude Include="../../src/delegate_makedeleg.h" />
     <ClInclude Include="../../src/delegate_utils.h" />
+    <ClInclude Include="..\..\src\delegate_dynamic.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
