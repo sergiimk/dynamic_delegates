@@ -83,7 +83,9 @@
     <ClInclude Include="../../src/delegate_funcstyle.h" />
     <ClInclude Include="../../src/delegate_makedeleg.h" />
     <ClInclude Include="../../src/delegate_utils.h" />
+    <ClInclude Include="..\..\src\delegate_deleg_dynn.h" />
     <ClInclude Include="..\..\src\delegate_dynamic.h" />
+    <ClInclude Include="..\..\src\typetraits.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

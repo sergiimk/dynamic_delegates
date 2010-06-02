@@ -1,9 +1,15 @@
+#ifndef _DELEGATE_CONFIG_H__
+#define _DELEGATE_CONFIG_H__
+
 #include <memory.h> // to allow <,> comparisons
 
 ////////////////////////////////////////////////////////////////////////////////
 //						Configuration options
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+// Defines the maximum invoke arguments of delegate
+static const int MAX_INVOKE_ARGS = 5;
 
 // Uncomment the following #define for optimally-sized DELEGATEs.
 // In this case, the generated asm code is almost identical to the code you'd get
@@ -60,3 +66,5 @@
 // At present, GCC doesn't recognize constness of MFPs in templates
 #	define FASTDELEGATE_GCC_BUG_8271
 #endif
+
+#endif //_DELEGATE_CONFIG_H__

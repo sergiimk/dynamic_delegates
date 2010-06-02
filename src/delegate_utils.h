@@ -1,3 +1,6 @@
+#ifndef _DELEGATE_UTILS_H__
+#define _DELEGATE_UTILS_H__
+
 ////////////////////////////////////////////////////////////////////////////////
 //						General tricks used in this code
 //
@@ -299,3 +302,5 @@ namespace detail {	// we'll hide the implementation details in a nested namespac
 #endif // MS/Intel hacks
 
 }  // namespace detail
+
+#endif //_DELEGATE_UTILS_H__

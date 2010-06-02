@@ -1,3 +1,6 @@
+#ifndef _DELEGATE_CLOSURE_H__
+#define _DELEGATE_CLOSURE_H__
+
 ////////////////////////////////////////////////////////////////////////////////
 //						Fast Delegates, part 2:
 //
@@ -127,6 +130,11 @@ namespace detail {
 			, m_pStaticFunction (right.m_pStaticFunction)
 #endif
 		{ }
+
+
+		// Hacky methods for reflection library
+		GenericClass* getThisPtr() const { return m_pthis; }
+		void setThisPtr(GenericClass* pThis) { m_pthis = pThis; }
 
 	protected:
 		void SetMementoFrom(const function_data &right)  
@@ -314,3 +322,5 @@ namespace detail {
 
 
 } // namespace detail
+
+#endif //_DELEGATE_CLOSURE_H__

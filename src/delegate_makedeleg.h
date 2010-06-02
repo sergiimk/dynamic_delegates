@@ -6,7 +6,7 @@
 //N=0
 template <class X, class Y, class RetType>
 DELEGATE(0)<RetType> MAKE_DELEGATE(Y* x, RetType (X::*func)() DELEG_CONST) { 
-	return DELEGATE0<RetType>(x, func);
+	return DELEGATE(0)<RetType>(x, func);
 }
 
 //N=1

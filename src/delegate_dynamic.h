@@ -1,18 +1,13 @@
-#ifndef _SF_DELEGATE_H__
-#define _SF_DELEGATE_H__
+#ifndef _SF_DELEGATE_DYNAMIC_H__
+#define _SF_DELEGATE_DYNAMIC_H__
 
 namespace delegates
 {
 
-#ifndef _SF_DELEGATE_INTERNALS__
-#define _SF_DELEGATE_INTERNALS__
-
 #include "delegate_config.h"
 #include "delegate_utils.h"
 #include "delegate_closure.h"
-#include "delegate_delegn.h"
-
-#endif //_SF_DELEGATE_INTERNALS__
+#include "delegate_deleg_dynn.h"
 
 // Generate function-style delegate for zero-overhead and dynamic versions of delegates
 #define FS_DELEGATE delegate_dynamic
@@ -41,4 +36,4 @@ delegate_dynamic<FT> make_delegate_dynamic(FT* f) {
 
 }
 
-#endif //_SF_DELEGATE_H__
+#endif //_SF_DELEGATE_DYNAMIC_H__
